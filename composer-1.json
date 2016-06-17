@@ -1,0 +1,29 @@
+{
+    "name": "mistermuckle/timer",
+    
+    "description": "timers that provide estimated and actual durations",
+    
+    "authors": [
+        {
+            "name": "Chris Hoffman",
+            "email": "mistermuckle@gmail.com"
+        }
+    ],
+    
+    "require": {
+        "mistermuckle/date_time": "dev-master"
+    },
+    
+    "autoload": {
+        "psr-4": {
+            "Timer\\": "src/Timer/"
+        }
+    },
+    
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mistermuckle/date_time"
+        }
+    ]
+}
