@@ -1,6 +1,6 @@
 <?php
 
-namespace 'Timer';
+namespace Timer;
 
 trait WrappedTimerTrait
 {
@@ -39,5 +39,5 @@ trait WrappedTimerTrait
         return $this->timer->getActualDuration();
     }
     
-    abstract private function getTimer();
+    abstract protected function getTimer();
 }

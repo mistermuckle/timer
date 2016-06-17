@@ -1,8 +1,8 @@
 <?php
 
-namespace 'Timer';
+namespace Timer;
 
-use 'DateTime\NullDateTime';
+use DateTime\NullDateTime;
 
 class Timer implements TimedInterface
 {
@@ -21,11 +21,16 @@ class Timer implements TimedInterface
         $this->startTime = new NullDateTime();
     }
     
-    public function start(\DateInterval $estimatedDuration)
+    public function start()
     {
         if (!$this->hasStarted()) {
             $this->startTime = new \DateTimeImmutable('now');
         }
+    }
+
+    public function stop()
+    {
+        $this->endTime = new \DateTimeImmutable('now');
     }
     
     public function getStartTime()
